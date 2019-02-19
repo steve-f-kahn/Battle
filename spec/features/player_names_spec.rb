@@ -6,4 +6,9 @@ feature "Player names" do
     click_button("Submit")
     expect(page).to have_content "Player 1: Steve Player 2: Amina"
   end
+
+scenario "has discripted header" do
+  visit('/')
+  expect(page).to have_content('Battle')
+end
 end
