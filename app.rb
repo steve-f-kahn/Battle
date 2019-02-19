@@ -1,9 +1,10 @@
-require 'sinatra'
+require 'sinatra/base'
 
-def battle
+class Battle < Sinatra::Base
     get'/' do
       "Hello Battle!"
     end
-end
 
-battle
+run! if app_file == $0
+
+end
