@@ -1,4 +1,4 @@
-require_relative 'spec_helper.rb'
+require_relative 'feature_spec_helper.rb'
 
 feature "Player names" do
   let(:player_1_name) { "Simon" }
