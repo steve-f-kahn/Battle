@@ -6,13 +6,18 @@
     <div>
       HP: 100
     </div>
+    <div>
+      <form action="/attack" method="post">
+        <input type="submit" value="attack">
+      </form>
+    </div>
   </div>
   <div style="flex: 1;text-align: center">
     <div>
       Player 2: <%= @player_2_name %>
     </div>
     <div>
-      HP: 100
+      HP: <%= @player_2_hp %>
     </div>
   </div>
 </div>
