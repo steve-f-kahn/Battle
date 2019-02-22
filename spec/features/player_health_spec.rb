@@ -19,4 +19,16 @@ feature "Display player health" do
       expect(page).to have_content("HP: 90")
     end
   end
+
+  context "Player 1 is attacked" do
+    scenario "Player 2 attacks player 1 after being attacked himself" do
+      sign_in_and_play(
+        player_1_name: player_1_name,
+        player_2_name: player_2_name
+      )
+      click_button "attack"
+      click_button "attack"
+      expect(find(:css, ".player_1").text).to have_content("HP: 90")
+    end
+  end
 end
