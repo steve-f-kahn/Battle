@@ -9,12 +9,12 @@ describe Game do
     end
   end
   it "Should attack player 2 for 10 damage" do
-    game = Game.new
+    game = Game.new(player_1, player_2)
     expect(game.attack(player_2, 10)).to eq 90
   end
 
   it "Should attack player 2 for 20 damage" do
-    game = Game.new
+    game = Game.new(player_1, player_2)
     expect(game.attack(player_2, 20)).to eq 80
   end
 end
