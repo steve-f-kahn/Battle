@@ -4,13 +4,15 @@
     Player 1: <%= @player_1_name %>
     </div>
     <div>
-      HP: 100
+      HP: <%= game.player_1.hp %>
     </div>
-    <div>
-      <form action="/attack" method="post">
-        <input type="submit" value="attack">
-      </form>
-    </div>
+    <% if game.player_turn == 1 %>
+      <div>
+        <form action="/player-1-attack" method="post">
+          <input type="submit" value="attack">
+        </form>
+      </div>
+    <% end %>
   </div>
   <div class="player_2" style="flex: 1;text-align: center">
     <div>
@@ -19,5 +21,12 @@
     <div>
       HP: <%= @player_2_hp %>
     </div>
+    <% if game.player_turn == 2 %>
+      <div>
+        <form action="/player-2-attack" method="post">
+          <input type="submit" value="attack">
+        </form>
+      </div>
+    <% end %>
   </div>
 </div>
