@@ -4,9 +4,9 @@
     Player 1: <%= @player_1_name %>
     </div>
     <div>
-      HP: <%= game.player_1.hp %>
+      HP: <%=   Game.current_game.player_1.hp %>
     </div>
-    <% if game.player_turn == 1 %>
+    <% if   Game.current_game.player_turn == 1 %>
       <div>
         <form action="/player-1-attack" method="post">
           <input type="submit" value="attack">
@@ -21,7 +21,7 @@
     <div>
       HP: <%= @player_2_hp %>
     </div>
-    <% if game.player_turn == 2 %>
+    <% if   Game.current_game.player_turn == 2 %>
       <div>
         <form action="/player-2-attack" method="post">
           <input type="submit" value="attack">
